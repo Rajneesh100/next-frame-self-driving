@@ -70,6 +70,8 @@ self-driving/
 ### Install
 
 ```bash
+python -m venv venv
+source venv/bin/activate 
 pip install -r requirements.txt
 ```
 
@@ -154,8 +156,11 @@ Controls: R to restart, Q/ESC to quit.
 | `CHUNK_SIZE`| 32    | World generated in 32x32 chunks      |
 
 
-
-(venv) rajneesh@Rajneeshs-MacBook-Air game % python play_road.py --auto python drive_road.py --checkpoint model/checkpoints/policy_best.pt
-
-
+user & model
+```bash
+python play_road.py --auto python drive_road.py --checkpoint model/checkpoints/policy_best.pt
+```
+model & expert
+```bash
 python drive_road.py --checkpoint model/checkpoints/policy_best.pt --expert-compare
+```
